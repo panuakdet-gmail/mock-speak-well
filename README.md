@@ -119,6 +119,18 @@ backfill to also re-read the old pages.
 
 To turn it off, say so — it stays on for the rest of the session otherwise.
 
+### Asking for even shorter answers
+
+Once the skill is on, it reads your messages for signs of how much you can take right now, and it checks every message, not only the first. These words do not switch the skill on by themselves:
+
+| You write | You get |
+|---|---|
+| nothing special | the normal style described above |
+| "concise", "concisely" or "สั้นๆ" | very concise answers: the verdict and the next step, usually two to four sentences |
+| a word in ALL CAPS, "ffs", or an exclamation mark | the shortest answer possible, often one or two sentences, with every reason and side note cut |
+
+Ordinary capitals, such as the start of a sentence or an acronym like "PDF", do not count. The shorter level stays on for the rest of the session until you say otherwise. At the two shorter levels, a fragment such as "Fixed." is allowed only when it cannot be misread, for example when the missing subject is obvious. Anything that could be read two ways is written as a full sentence.
+
 ## What it produces
 
 Not files. The skill changes how the assistant writes for the rest of the conversation, and it checks its own answer against a short list before sending:
