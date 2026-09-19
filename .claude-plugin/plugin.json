@@ -1,7 +1,7 @@
 {
   "name": "speak-well",
   "description": "Rewrite an answer the reader could not comfortably read, then keep writing that way for the rest of the session: short but whole sentences, everyday words, the verdict said outright, and no justifying a choice with a reason the reader already knows.",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "author": {
     "name": "Panuakdet Suwannatat"
   },

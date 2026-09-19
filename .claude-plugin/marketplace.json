@@ -6,14 +6,14 @@
   },
   "metadata": {
     "description": "A Claude Code skill that makes it write answers you can actually read on a phone — short, plain, complete sentences, and no padding",
-    "version": "1.0.0"
+    "version": "1.1.0"
   },
   "plugins": [
     {
       "name": "speak-well",
       "source": "./",
       "description": "Rewrite an unreadable answer and keep writing that way: everyday words, whole sentences, the verdict said outright, and no explaining the obvious back to you",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "author": {
         "name": "Panuakdet Suwannatat"
       },
