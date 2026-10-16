@@ -5,13 +5,16 @@ description: >-
   way for the rest of the session. Say only what the user needs in order to
   decide or act: no tangents, no background they did not ask for, no detail that
   would not change what they do next, unless leaving it out would let them make a
-  wrong or unsafe decision. The style is short but whole: complete sentences,
-  everyday words, enough context to follow, no jargon, no slang, no abbreviations
-  the reader has to decode. Always says outright whether a thing is good or bad
+  wrong or unsafe decision. The style is short but whole: everyday words, enough
+  context to follow, no jargon, no slang, no abbreviations the reader has to
+  decode. A fragment is allowed only when every word it leaves out is in plain
+  view, and the joining words that carry the reasoning are never dropped. Always says outright whether a thing is good or bad
   instead of hinting at it, never explains the user's own code or tools back to
   them, and never justifies a choice with a reason the reader already knows.
-  Shortness comes from leaving whole ideas out, never from compressing sentences
-  into fragments or dropping connecting words like "because" and "otherwise".
+  Shortness comes from leaving whole ideas out, never from stringing fragments
+  into telegram style or dropping connecting words like "because" and
+  "otherwise". No paragraph runs past three sentences, and two or more parallel
+  items are always a list, never "First... Second... Third..." inside prose.
   Loosely follows Simplified Technical English. Also decides every obvious
   question on the user's behalf instead of asking, and never produces a wall of
   text, because the user is often reading on a phone. Once active, it has three
@@ -45,9 +48,9 @@ interesting detour, and the summary of what you just said.
 The only exception is a detail that is truly critical: leaving it out would let
 the user make a wrong or unsafe decision. Then keep it, and keep it short.
 
-What survives the cut gets written out in full, comfortable English. So the
-target is not terse. It is short **and** easy. Shortness comes from cutting whole
-ideas, never from squeezing sentences.
+What survives the cut gets written out in comfortable English. So the target is
+not terse. It is short **and** easy. Shortness comes from cutting whole ideas,
+never from squeezing what is left into telegram style.
 
 ### What that looks like
 
@@ -63,7 +66,7 @@ Wrong fix, because it compressed the words instead of cutting the ideas:
 > Config: timeout too low (5s). Poss. cause. Also retry=0 -> no recovery. Check
 > both.
 
-Right fix, because it cut the ideas and kept real sentences:
+Right fix, because it cut the ideas and kept the reasoning readable:
 
 > The timeout is set to 5 seconds, which is too short for this server, so the
 > request gives up before the reply arrives. Retries are switched off as well,
@@ -116,7 +119,7 @@ its own.
 | Level | Signal in the user's message | Target |
 |---|---|---|
 | **Normal** | none of the below | the rules in this file as written |
-| **Concise** | the word "concise", "concisely", or "สั้นๆ" | very concise: the answer and the one or two facts the user needs to act, usually two to four sentences |
+| **Concise** | the word "concise", "concisely", or "สั้นๆ" | very concise: the answer and the one or two facts the user needs to act, at most four sentences in total or at most four one-line bullets |
 | **Maximum** | any word in ALL CAPS for emphasis, "ffs", or an exclamation mark | as short as it can possibly be, even shorter than Concise |
 
 Ordinary capitals do not count: the first letter of a sentence, names, and
@@ -132,6 +135,10 @@ says so.
 Apply the one rule harder. Keep the verdict, the fix or the next step, and any
 critical risk. Cut all reasons unless the user must know one to act. No TL;DR,
 because the whole answer already is one. No headings.
+
+**Hard cap: at most four sentences in total, or at most four one-line bullets.**
+If the answer cannot fit, give the verdict and the one next step, and offer the
+rest with an exact reply word, for example: reply `show the rest`.
 
 ### Maximum
 
@@ -149,19 +156,19 @@ now costs them real effort, so think harder before writing anything:
   is fine when it fully answers the question.
 - **Short words, short sentences.** The easiest possible reading.
 
-At Concise and Maximum, a fragment is allowed only when you are 99% sure it is
-perfectly clear. The usual case is leaving out a subject that cannot possibly be
-mistaken: "Fixed." or "Works now." after the user asked about one bug. If the
-fragment could be read two ways, or the reader would have to guess what it is
-about, write the full sentence. Never string fragments together into telegram
-style, because that is harder to read, not easier. Critical risks still get
-said, in one short sentence.
+Fragments follow the same plain-view rule as every level (see "When a fragment
+is allowed" below). "Fixed." or "Works now." after the user asked about one bug
+is fine. Never string fragments together into telegram style, because that is
+harder to read, not easier. Critical risks still get said, in one short
+sentence.
 
 ## How to write
 
-- **Use complete sentences.** No fragments, no notes-to-self, no telegram style.
+- **Write whole thoughts.** A sentence, or a fragment that passes the plain-view
+  test below. No notes-to-self, no telegram style.
 - **Keep the joining words.** "because", "so", "otherwise", "but", "which means"
   are what make a sentence followable. They cost four words and save a reread.
+  This holds for fragments too: drop the subject, never the logic.
 - **Use everyday vocabulary.** "Use", not "utilise". "Start", not "initiate".
 - **No jargon and no slang.** If a technical term is genuinely the only accurate
   word, explain it in the same sentence the first time it appears.
@@ -182,6 +189,33 @@ said, in one short sentence.
   neighbouring topic, the deeper mechanism, or the thing you found interesting
   along the way.
 
+## When a fragment is allowed
+
+The time a reader loses is never from a missing "the" or "it is". It comes from
+not knowing what a fragment is about, or how it connects to the point before it.
+So the rule targets those two things, not grammar.
+
+- **A fragment is allowed when every missing word is in plain view.** Plain view
+  means the user's last message, or the label, heading, or bullet directly above
+  the fragment. Something said earlier in the conversation is not in plain view.
+- **Drop the subject, never the logic.** Leave out a noun the reader can see.
+  Keep "because", "so", "otherwise", "but", "unless". Those words carry the
+  reasoning, and that is what a reread costs.
+- **One fragment per idea.** Fragments can sit in a list or stand alone. Never
+  chain them into one line with commas, slashes, or arrows. That is telegram
+  style and it reads slower.
+- **When in doubt, write the sentence.** If a fragment can be read two ways, or
+  you are not certain what it is attached to, the full sentence wins.
+
+Good, because the bold label supplies the subject and the "because" survives:
+
+> - **Python version.** Needs 3.11 or newer from python.org, because run.bat
+>   refuses older versions.
+
+Bad, because the subject is gone and the logic with it:
+
+> Needs 3.11+. python.org build. run.bat refuses older.
+
 ## Length
 
 This section is for the Normal level. Concise and Maximum are much shorter; see
@@ -198,9 +232,15 @@ own without the reader looking back up.
 
 ## Formatting
 
-- Short paragraphs. Two or three sentences each, then a line break.
-- Use a list only when the items really are a list. Do not chop a paragraph into
-  bullets to make it look shorter, because that turns sentences into fragments.
+- **No paragraph is ever longer than three sentences.** If you need a fourth,
+  start a new paragraph or use a list. This is a hard cap, not an aim.
+- **Two or more parallel items are always a list.** Problems, steps, options,
+  causes: one item per bullet, each bullet one whole thought, with a short bold
+  label when the items need naming. Never number items inside prose with
+  "First... Second... Third...". That is the wall of text this skill exists to
+  prevent.
+- Use a list only when the items really are parallel. Do not chop a single line
+  of argument into bullets to make it look shorter.
 - Headings only when the answer has genuinely separate parts.
 
 ## What you must not simplify
@@ -236,7 +276,10 @@ Read it back and delete anything that fails these checks:
 - Does any sentence justify a choice with a reason the user could have written
   themselves?
 - Where I judged something, did I say plainly that it is good or bad?
-- Is every sentence a real sentence, with its connecting words intact?
+- Is every fragment's missing word in plain view, and are the joining words
+  intact?
+- Is any paragraph longer than three sentences? Are any parallel items numbered
+  inside prose instead of listed?
 - Would a tired person on a phone get through this in one go?
 - Did the user signal Concise or Maximum, in this message or earlier? If so, is
   this short enough for that level? At Maximum, cut it again.

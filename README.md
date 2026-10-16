@@ -2,7 +2,7 @@
 
 A skill for [Claude Code](https://claude.com/claude-code) that makes it **write answers you can read on a phone, in one go, without rereading a sentence.**
 
-Short, but not clipped. The shortness comes from cutting whole ideas — the restated question, the caveat that changes nothing, the summary of what it just said — and then writing what survives in full, ordinary English. It does not come from squeezing sentences into fragments, which is what most "be concise" instructions actually produce.
+Short, but not clipped. The shortness comes from cutting whole ideas — the restated question, the caveat that changes nothing, the summary of what it just said — and then writing what survives in full, ordinary English. It does not come from squeezing what is left into telegram style, which is what most "be concise" instructions actually produce. A fragment is fine when every word it leaves out is in plain view, such as right after a bold label, but the words that carry the reasoning ("because", "so", "otherwise") are never dropped. No paragraph runs past three sentences, and a set of parallel points is always a list, never "First... Second... Third..." inside one paragraph.
 
 It also bans four habits that make an answer tiring rather than long: hiding the verdict inside a noun instead of saying "this is wrong", explaining your own code and tools back to you, justifying a recommendation with something everybody already knows, and asking you a question it could have answered itself.
 
@@ -156,10 +156,10 @@ Once the skill is on, it reads your messages for signs of how much you can take 
 | You write | You get |
 |---|---|
 | nothing special | the normal style described above |
-| "concise", "concisely" or "สั้นๆ" | very concise answers: the verdict and the next step, usually two to four sentences |
+| "concise", "concisely" or "สั้นๆ" | very concise answers: the verdict and the next step, at most four sentences or four one-line bullets; anything more is offered with an exact reply word |
 | a word in ALL CAPS, "ffs", or an exclamation mark | the shortest answer possible, often one or two sentences, with every reason and side note cut |
 
-Ordinary capitals, such as the start of a sentence or an acronym like "PDF", do not count. The shorter level stays on for the rest of the session until you say otherwise. At the two shorter levels, a fragment such as "Fixed." is allowed only when it cannot be misread, for example when the missing subject is obvious. Anything that could be read two ways is written as a full sentence.
+Ordinary capitals, such as the start of a sentence or an acronym like "PDF", do not count. The shorter level stays on for the rest of the session until you say otherwise. A fragment such as "Fixed." is allowed at any level when the missing words are in plain view, for example in your last message or in the label right above it. Anything that could be read two ways is written as a full sentence.
 
 ## What it produces
 
